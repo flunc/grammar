@@ -1,6 +1,6 @@
 {
   "name": "flunc-grammar",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A grammar combinator library for creating parsers and printers",
   "main": "index.js",
   "author": "Scott Christopher",
