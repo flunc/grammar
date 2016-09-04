@@ -1,0 +1,20 @@
+{
+  "name": "flunc-grammar",
+  "version": "0.0.0",
+  "description": "A grammar combinator library for creating parsers and printers",
+  "main": "index.js",
+  "author": "Scott Christopher",
+  "license": "MIT",
+  "scripts": {
+    "release-major": "xyz --repo git@github.com:flunc/grammar.git --increment major",
+    "release-minor": "xyz --repo git@github.com:flunc/grammar.git --increment minor",
+    "release-patch": "xyz --repo git@github.com:flunc/grammar.git --increment patch"
+  },
+  "dependencies": {
+    "flunc-optics": "0.0.2",
+    "ramda-fantasy": "0.6.*"
+  },
+  "devDependencies": {
+    "xyz": "1.0.*"
+  }
+}
