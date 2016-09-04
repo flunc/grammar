@@ -153,6 +153,13 @@ const integer = adapt(
   both(opt(symbol('-')), many(digit))
 );
 
+// A Grammar that matches a literal string
+//:: String -> Grammar String String
+const stringLit = str => adapt(
+  Iso.iso(() => str, () => str),
+  str.length > 1 ? both(literal(str[0]), stringLit(str.slice(1))) : literal(str[0])
+);
+
 //:: Grammar s b -> s -> Maybe b
 const parse = g => s => preview(g, s).map(fst);
 
@@ -184,6 +191,7 @@ module.exports = {
   satisfy,
   seqL,
   seqR,
+  stringLit,
   success,
   symbol
 };
