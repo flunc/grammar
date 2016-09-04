@@ -141,7 +141,7 @@ const digit = satisfy(c => /[0-9]/.test(c));
 const alpha = satisfy(c => /[a-zA-Z]/.test(c));
 
 // A Grammar that matches an positive or negative integer value
-const integral = adapt(
+const integer = adapt(
   compose(iso(
     t => {
       const c = fst(t);
@@ -172,7 +172,7 @@ module.exports = {
   element,
   eof,
   failure,
-  integral,
+  integer,
   literal,
   many,
   many1,

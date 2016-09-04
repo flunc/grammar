@@ -1,10 +1,10 @@
 const
-  { adapt, alpha, bind, eof, integral, many, parse, print, replicate, seqL } = require('.'),
+  { adapt, alpha, bind, eof, integer, many, parse, print, replicate, seqL } = require('.'),
   { charListToStr } = require('./isos');
 
 // A Grammar that matches the repeating pattern of an integer `n` followed by `n` characters
 const nChars = seqL(many(bind(
-  integral,
+  integer,
   n => adapt(charListToStr, replicate(n, alpha)),
   s => s.length
 )), eof);
